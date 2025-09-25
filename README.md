@@ -1,18 +1,22 @@
+# 前置知识
 ![Logo](images/screenshot1.png)
 
+# 弧度的解释
 ![Logo](images/screenshot2.png)
-
 ![Logo](images/screenshot3.png)
 
+# 相关张量的定义
 ![Logo](images/screenshot4.png)
 
+# 相关张量的操作
 ![Logo](images/screenshot5.png)
-
 ![Logo](images/screenshot6.png)
 
+# 公式
 ![Logo](images/screenshot7.png)
 
-代码实现（节选自[MiniMind模型定义](https://github.com/jingyaogong/minimind/blob/master/model/model_minimind.py)）
+# 代码实现
+节选自[MiniMind模型定义](https://github.com/jingyaogong/minimind/blob/master/model/model_minimind.py)第97-112行
 ```python
 def precompute_freqs_cis(dim: int, end: int = int(32 * 1024), theta: float = 1e6):
     freqs = 1.0 / (theta ** (torch.arange(0, dim, 2)[: (dim // 2)].float() / dim))
